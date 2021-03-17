@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>x1as project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./images/icon.png" type="image/png">
+</head>
+<body>
+    <header>
+        <h1>the X1as portfolio!<span class="open-tab" onclick="openTab()">&#9776;</span></h1>
+        <nav class="nav">
+            <ul class="nav-ul">
+                <li class="nav-li"><a href="./index.html">To-do list</a></li>
+                <li class="nav-li"><a href="./gallery.html">Gallery</a></li>
+                <li class="nav-li"><a href="./calculator.html">Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="header-end-mark"></div>
+    <main>
+        <div class="first-part">
+            <div class="first-part-pictures">
+                <img src="./images/image_seven.png">
+                <span>Now I am 18 years old and here I do not understand something</span>
+            </div>
+            <div class="first-part-pictures">
+                <img src="./images/image_eight.jpg">
+                <span>And here I stand in an incomprehensible posture of a jerk</span>
+            </div>
+        </div>
+        <div class="second-part">
+            <div class="slider">
+                <button class="previous" onclick="prevPicture()">prev</button>
+                <img class="active" src="./images/image_one.jpg">
+                <img src="./images/image_two.jpg">
+                <img src="./images/image_three.jpg">
+                <img src="./images/image_four.jpg">
+                <img src="./images/image_five.jpg">
+                <img src="./images/image_six.jpg">
+                <button class="next" onclick="nextPicture()">next</button>
+            </div>
+            <h1>That's a moments when I was a little bit younger...</h1>
+        </div>
+        <div class="third-part">
+            <div id="third-part-container">
+                <img src="./images/sabit.jpg" class="third-part-image" onclick="sup()">
+                <div class="third-part-container-adding-block"></div>
+            </div>
+            <button class="third-part-container-adding-block-button" type="button" onclick="addBlock()">Click me to add some block!</button>
+        </div>
+    </main>
+    <script src="gallery.js"></script>
+</body>
+</html>

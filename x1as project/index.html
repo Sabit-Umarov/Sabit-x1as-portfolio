@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>x1as project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./images/icon.png" type="image/png">
+</head>
+<body>
+    <header>
+        <h1>the X1as portfolio!<span class="open-tab" onclick="openTab()">&#9776;</span></h1>
+        <nav class="nav">
+            <ul class="nav-ul">
+                <li class="nav-li"><a href="./index.html">To-do list</a></li>
+                <li class="nav-li"><a href="./gallery.html">Gallery</a></li>
+                <li class="nav-li"><a href="./calculator.html">Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="header-end-mark"></div>
+    <main>
+        <div class="todo-container">
+            <h1>TO DO LIST</h1>
+            <div class="todo-list-adding">
+                <input id="todo-inputed-string" type="text" placeholder="Add a thing">
+                <button class="todo-add-button" onclick="thingsAdd()">Add</button>
+            </div>
+            <ul class="todo-list-of-things">
+                <li class="todo-thing" onclick="selectedLi(this)">Create 'to do list'</li>
+                <li class="todo-thing" onclick="selectedLi(this)">Also create a weird gallery</li>
+                <li class="todo-thing" onclick="selectedLi(this)">And a calculator too</li>
+            </ul>
+            <button class="todo-thing-remove-button" onclick="deleteChosed()">Delete chosed</button>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>

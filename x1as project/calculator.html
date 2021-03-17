@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>x1as project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./images/icon.png" type="image/png">
+</head>
+<body>
+    <header>
+        <h1>the X1as portfolio!<span class="open-tab" onclick="openTab()">&#9776;</span></h1>
+        <nav class="nav">
+            <ul class="nav-ul">
+                <li class="nav-li"><a href="./index.html">To-do list</a></li>
+                <li class="nav-li"><a href="./gallery.html">Gallery</a></li>
+                <li class="nav-li"><a href="./calculator.html">Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="header-end-mark"></div>
+    <main>
+        <h2 class="calc-h2">Calculator</h2>
+        <div id="calculator">
+            <div class="calc-head">
+                <h2 class="output-numbs">0</h2>
+                <h1 class="input-numbs">0</h1>
+            </div>
+            <div class="calc-body">
+                <button class="AC" onclick="AC()">AC</button>
+                <button class="C" onclick="C()">C</button>
+                <button class="plus" onclick="plus()">+</button>
+                <button class="one" onclick="createNumber(1)()">1</button>
+                <button class="two" onclick="createNumber(2)()">2</button>
+                <button class="three" onclick="createNumber(3)()">3</button>
+                <button class="minus" onclick="minus()">-</button>
+                <button class="four" onclick="createNumber(4)()">4</button>
+                <button class="five" onclick="createNumber(5)()">5</button>
+                <button class="six" onclick="createNumber(6)()">6</button>
+                <button class="multiply" onclick="multiply()">*</button>
+                <button class="seven" onclick="createNumber(7)()">7</button>
+                <button class="eight" onclick="createNumber(8)()">8</button>
+                <button class="nine" onclick="createNumber(9)()">9</button>
+                <button class="division" onclick="division()">/</button>
+                <button class="zero" onclick="createNumber(0)()">0</button>
+                <button class="dot" onclick="createNumber('.')()">.</button>
+                <button class="del" onclick="del()">del</button>
+                <button class="equal" onclick="equal()">=</button>
+            </div>
+        </div>
+    </main>
+    <script src="calc.js"></script>
+</body>
+</html>

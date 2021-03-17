@@ -1,0 +1,466 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 2500% 2500%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+header{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: linear-gradient(90deg, rgba(0,7,131,1) 0%, rgba(112,0,0,1) 100%, rgba(14,9,121,1) 100%); 
+}
+
+header h1{
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    animation: glow 4s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0px 0px 10px red, 0px 0px 20px blue;
+    }
+    40% {
+        text-shadow: 0px 0px 30px blue, 0px 0px 20px red;
+    }
+    60% {
+        text-shadow: 0px 0px 30px red, 0px 0px 20px blue;
+    }
+    80% {
+        text-shadow: 0px 0px 30px blue, 0px 0px 20px red;
+    }
+    100% {
+        text-shadow: 0px 0px 10px red, 0px 0px 20px blue;
+    }
+}
+
+.nav {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.26);
+    margin-top: 10px;
+    height: 70px;
+}
+
+@keyframes opening {
+    from{
+        height: 20px;
+    }
+    to {
+        height: 70px;
+    }
+}
+
+@keyframes closing {
+    from{
+        height: 70px;
+    }
+    to {
+        height: 20px;
+    }
+}
+
+@keyframes enter {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.open-tab {
+    padding: 0 20px;
+}
+
+.open-tab:hover {
+    cursor: pointer;
+}
+
+.nav-ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+
+a{
+    text-transform: none;
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+}
+
+.nav-li {
+    padding:30px;
+    width: 200px;
+    text-align: center;
+}
+
+.nav-li:hover {
+    cursor: pointer;
+    color: black;
+    text-shadow: 2px 2px 5px rgb(255, 255, 255);
+}
+
+.header-end-mark {
+    height: 2px;
+    background-color: white;
+}
+
+main {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todo-container {
+    margin-top: 80px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    min-width: 600px;
+    min-height: 650px;
+}
+
+.todo-container h1{
+    margin-top: 20px;
+    color: white;
+}
+
+.todo-list-adding {
+    margin-top: 30px;
+    display: flex;
+    align-content: center;
+}
+
+input[type=text] {
+    min-width: 350px;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid rgb(255, 255, 255);
+    outline: none;
+}
+
+.todo-add-button {
+    padding: 6px;
+    font-size: 20px;
+    outline: none;
+    color: white;
+    background-color:rgba(255, 255, 255, 0.26);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.todo-add-button:hover {
+    background-color:rgba(0, 0, 0, 0.26);
+    cursor: pointer;
+}
+
+.todo-list-of-things {
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 20px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 400px;
+    background-color: white;
+}
+
+.todo-thing {
+    word-wrap:break-word;
+    font-style: italic;
+    font-size: 30px;
+    padding: 20px 10px;
+    border-bottom: 1px solid grey;
+    width: 400px;
+}
+
+.todo-thing:hover {
+    cursor: pointer;
+}
+
+.close {
+    float: right;
+    padding: 10px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.todo-thing-remove-button {
+    margin-top: 20px;
+    padding: 6px 100px;
+    font-size: 20px;
+    outline: none;
+    color: white;
+    background-color:rgba(255, 255, 255, 0.26);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.todo-thing-remove-button:hover {
+    background-color:rgba(0, 0, 0, 0.26);
+    cursor: pointer;
+}
+
+.first-part {
+    display: flex;
+}
+
+.first-part-pictures {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding-top:15px;
+    padding-bottom: 40px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: aliceblue;
+    border-radius: 5%;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.7);
+}
+
+.first-part-pictures:hover {
+    background-color: rgba(240, 248, 255, 0.801);
+}
+
+.first-part-pictures img {
+    border-top-right-radius: 5%;
+    border-top-left-radius: 5%;
+    width: 650px;
+    height: 750px;
+}
+
+.first-part-pictures span {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.second-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 75px;
+    opacity: 0;
+    transition: 5s;
+}
+
+.second-part h1{
+    bottom: 65px;
+    position: relative;
+    border-top: 1px solid grey;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    width: 900px;
+    background-color: white;
+    border-radius: 15%;
+    border: 30px solid rgb(255, 255, 255);
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.7);
+}
+
+.slider button{
+    position: relative;
+    padding: 10px;
+    padding-left: 40px;
+    outline: none;
+    color: white;
+    background-color: black;
+    font-size: large;
+    cursor: pointer;
+}
+
+.slider img{
+    position: absolute;
+    opacity: 0;
+    width: 700px;
+    height: 700px;
+    transition: 1s;
+}
+
+.slider .active{
+    opacity: 1;
+}
+
+.previous {
+    border-top-left-radius: 50%;
+    right: 350px;
+    z-index: 1;
+}
+
+.next {
+    border-bottom-right-radius: 50%;
+    left: 350px;
+    z-index: 1;
+}
+
+.third-part {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 150px;
+    margin-bottom: 20px;
+    width: 900px;
+    background-color:rgb(255, 255, 255);
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.7);
+    padding-bottom: 30px;
+    padding-top: 50px;
+    border-radius: 15%;
+}
+
+#third-part-container {
+    margin: 20px;
+    width: 700px;
+    height: 700px;
+    background-color: rgba(0, 0, 0, 0.459);
+    display: flex;
+    flex-wrap: wrap;
+    align-content:flex-start;
+}
+
+.third-part-container-adding-block {
+    width: 140px;
+    height: 140px;
+    background: linear-gradient(-45deg, #ffffff, #000000);
+	background-size: 400% 400%;
+	animation: gradient 1s ease infinite;
+}
+
+.third-part-image {
+    width: 700px;
+    height: 700px;
+    display: none;
+    border-radius: 15%;
+}
+
+@keyframes quit {
+    from {
+        width: 700px;
+        height: 700px;
+        transform: rotate(0deg);
+    }
+    to {
+        width: 0px;
+        height: 0px;
+        transform: rotate(360deg);
+    }
+}
+
+.third-part-container-adding-block-button {
+    margin-top: 20px;
+    padding: 20px 100px;
+    font-size: 20px;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color:rgb(0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+@keyframes anim{
+    from {
+        opacity: 0;
+    } 
+    to {
+        opacity: 1;  
+    }
+}
+
+.calc-h2 {
+    font-size: 40px;
+    color: white;
+    margin: 20px;
+    padding: 20px 60px;
+    text-shadow: 2px 2px 2px black;
+}
+
+#calculator { 
+    width: 450px;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.7);
+}
+
+.calc-head {
+    display: flex;
+    align-items: flex-end;
+    flex-flow: column wrap;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid white;
+    padding-top: 20px;
+}
+
+.calc-head h1 {
+    color: white;
+    font-size: 40px;
+    padding: 5px 10px;
+    overflow: auto;
+    max-width: 100%;
+    padding-bottom: 20px;
+}
+
+.calc-head h2 {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 30px;
+    padding: 5px 10px;
+}
+
+.calc-body {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    border: 2px solid white;
+}
+
+.calc-body > button {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 40px;
+    font-size: 30px;
+    outline: none;
+    color: white;
+}
+
+.calc-body > button:hover {
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 40px;
+    font-size: 30px;
+    outline: none;
+    color: white;
+}
+
+.AC {
+    grid-column: 1 / 3;
+}
+
