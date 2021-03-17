@@ -1,1 +1,0 @@
-# Sabit-x1as-portfolio
